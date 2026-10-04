@@ -3,7 +3,7 @@ UDI,Date,System,Control,Product ID,Type,Air temperature (K),Process temperature 
 2,12/04/2014 16:09,0,A,L47181,L,298.2,308.7,1408,,,No failure
 3,13/04/2014 01:13,0,A,L47182,L,298.1,308.5,1498,,,No failure
 4,24/07/2014 20:35,0,B,L47183,L,,,1433,39.5,,No failure
-5,22/07/2014 01:31,0,C,L47184,L,,,,40,9,No failure
+5,22/07/2014 01:31,0,C,L47184,L,,,,40,9,No failure 
 6,26/07/2014 15:23,0,B,M14865,M,,,1425,41.9,,No failure
 7,26/07/2014 11:03,0,C,L47186,L,,,,42.4,14,No failure
 8,22/07/2014 01:24,0,B,L47187,L,,,1527,40.2,,No failure
