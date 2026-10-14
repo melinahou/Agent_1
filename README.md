@@ -40,10 +40,15 @@ This repository contains the production-ready machine learning inference package
 ---
 
 ## Δομή Repository
-- `Data/`: Περιέχει το σύνολο δεδομένων της άσκησης.
-- `agent1_validated_package/`: Περιέχει το τελικό επικυρωμένο πακέτο παραγωγής (`predict.py`, `requirements.txt`, `.pkl`).
-- `pipelineno1.ipynb`: Το πλήρες Jupyter Notebook με όλη τη μεθοδολογία, τα Nested-CV, τα Calibration steps και τα Conformal prediction results.
-- `respond.md`: Αρχείο τεκμηρίωσης με τις αλλαγές βάσει των παρατηρήσεων του καθηγητή.
+## 📂 Repository Structure / Δομή Αποθετηρίου
+Η τρέχουσα δομή του GitHub repository σας, όπως φαίνεται από τα αρχεία που έχουν ανέβει[cite: 3]:
+
+├── Agent1_pack/                     # Φάκελος πακέτου Agent 1 (predict.py, test, pkl, requirements)
+├── Data/                            # Dataset used in Agent1 pipeline[cite: 3]
+├── pipeline/                        # Φάκελος υλοποίησης pipeline
+├── README.md                        # Η κεντρική τεκμηρίωση του έργου[cite: 3]
+└── respond                          # Αρχείο απόκρισης προς τον καθηγητή[cite: 3]
+---
 
 ## Περίληψη Κεφαλαίων Pipeline (Agent 1)
 
