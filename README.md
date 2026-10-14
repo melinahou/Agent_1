@@ -50,7 +50,7 @@ This repository contains the production-ready machine learning inference package
 ## ⚙️ Code Structure / Δομή Κώδικα
 
 * **`0. Imports & Global Config`** – Εισάγει τις απαραίτητες βιβλιοθήκες (`pandas`, `numpy`, `scikit-learn`, `xgboost`, κ.λπ.) και ορίζει τις παγκόσμιες ρυθμίσεις και το στυλ οπτικοποίησης.
-* **`1. Dataset Loading & Structural Preprocessing`** – Φορτώνει το αρχείο CSV, μετατρέπει τις ημερομηνίες σε datetime, ταξινομεί τα δεδομένα και καθαρίζει τα ονόματα των στηλών.
+* **`1. Dataset Loading & Structural Preprocessing`** – Φορτώνει το αρχείο CSV, μετατρέπει τις ημερομηνίες σε datetime, ταξινομεί τα δεδομένα.
   * **`1.1 Exploratory Data Analysis (EDA)`** – Ελέγχει την κατανομή των βλαβών (`Diagnostic`), τους ελέγχους (`Control`) και τον εντοπισμό ελλιπών τιμών.
 * **`2. Feature Engineering`** – Δημιουργεί έναν custom μετασχηματιστή (`FeatureEngineer`) για τον υπολογισμό νέων χαρακτηριστικών όπως η διαφορά θερμοκρασίας και το γινόμενο ροπής επί φθοράς.
   * **`2.1 Leakage-Safe Pipeline Construction`** – Κατασκευάζει ασφαλές `ImbPipeline` που ενσωματώνει binary δείκτες απουσίας, KNN imputer και τεχνικές εξισορρόπησης.
@@ -61,7 +61,7 @@ This repository contains the production-ready machine learning inference package
   * **`6.1 Nested CV Execution & Performance Aggregation`** – Εκτελεί τον πλήρη βρόχο Nested CV ανά fold και συγκεντρώνει τα μετρικά αποτελέσματα απόδοσης.
 * **`7. Final Hyperparameter Optimization`** – Εφαρμόζει τελικό Grid Search στο σύνολο των δεδομένων και συλλέγει δεδομένα καμπυλών ανά fold.
 * **`8. Probability Calibration`** – Συγκρίνει πιθανότητες με μεθόδους `Sigmoid` και `Isotonic` βάσει Brier score και ECE.
-  * **`8.1 Fitted Calibration Models & Validation Curves`** – Εφαρμόζει τα μοντέλα καλιτραρίσματος και παράγει τις αντίστοιχες καμπύλες επικύρωσης/αξιοπιστίας.
+  * **`8.1 Fitted Calibration Models & Validation Curves`** – Εφαρμόζει τα μοντέλα καλιμπραρίσματος και παράγει τις αντίστοιχες καμπύλες επικύρωσης/αξιοπιστίας.
 * **`9. Cost-Sensitive Decision Analysis & Optimal Threshold Selection`** – Υπολογίζει το βέλτιστο όριο απόφασης ($t^*$) με βάση το οικονομικό κόστος των $C_{FN}$ και $C_{FP}$.
   * **`9.1 Cost Matrix Definition & Expected Loss Minimization`** – Ορίζει τον πίνακα κόστους και ελαχιστοποιεί την αναμενόμενη ζημία για τον καθορισμό του ορίου.
   * **`9.2 Sensitivity Analysis on Cost Ratios`** – Αναλύει τη μεταβολή του βέλτιστου ορίου συναρτήσει διαφορετικών λόγων κόστους (Cost Ratios).
@@ -73,18 +73,20 @@ This repository contains the production-ready machine learning inference package
 * **`11. Independent Test Evaluation`** – Εφαρμόζει πρωτόκολλο split-conformal και αξιολογεί το μοντέλο σε ανεξάρτητο σύνολο δοκιμών.
 * **`12. Publication-Grade Figure Definitions & Styling Functions`** – Περιέχει συναρτήσεις οπτικοποίησης για τη δημιουργία επαγγελματικών γραφημάτων υψηλής ανάλυσης.
   * **`12.1 Execute and Render All Publication-Grade Figures`** – Εκτελεί τη μαζική παραγωγή, αποθήκευση και προβολή όλων των γραφημάτων σε μορφές PNG, PDF και SVG.
+* ** `13. Advanced Data Persistence & Artifact Serialization Pipeline`** - Ορίζει μηχανισμούς και συναρτήσεις για την ασφαλή αποθήκευση, συμπίεση και διαχείριση όλων των εκπαιδευμένων μοντέλων, των transformer pipelines, των καμπυλών και των serialised αντικειμένων σε αρχεία (π.χ. με joblib και pickle).
+  * **`13.1 Execute Full Artifact Serialization`**-Εκτελεί την οριστική αποθήκευση όλων των παραγόμενων αρχείων, μοντέλων και διαμερισμάτων δεδομένων στον τοπικό φάκελο εργασίας για μελλοντική επαναχρησιμοποίηση.
+* **`14. Integrated Real-Time Inference Wrapper (Agent 1 Prediction Engine)`**- Δημιουργεί μια ενοποιημένη κλάση/συνάρτηση wrapper (Agent1InferenceEngine) η οποία αναλαμβάνει την αυτόματη επεξεργασία νέων δεδομένων εισόδου, εφαρμόζει τους μετασχηματισμούς, υπολογίζει τις βαθμονομημένες πιθανότητες και παρέχει την τελική απόφαση βάσει του βέλτιστου ορίου κόστους ($t^*$).
+* **`14.1 Run Inference Engine on Sample Holdout Data`**- Δοκιμάζει το σύστημα inference σε δείγματα από το holdout/test set, επιβεβαιώνοντας την ορθότητα παραγωγής προβλέψεων και εκτιμήσεων αβεβαιότητας σε πραγματικό χρόνο.
+* **`15. Comprehensive Model Explainability & Feature Importance (SHAP Analysis)`**- Εφαρμογή ανάλυσης SHAP (SHapley Additive exPlanations) για το τελικό εκπαιδευμένο μοντέλο XGBoost, εξάγοντας τόσο τις παγκόσμιες (global) όσο και τις τοπικές (local) τιμές συνεισφοράς των χαρακτηριστικών.
+* **`15.1 Generate and Save SHAP Summary & Dependence Plots`**- Παράγει και αποθηκεύει τα αντίστοιχα διαγράμματα SHAP (summary plots, bar plots και dependence plots) για την ερμηνευσιμότητα των αποφάσεων του μοντέλου πρόβλεψης αστοχίας.
+* **`16. Error Analysis & Edge Case Misclassification Diagnostic Suite`**- Δημιουργεί μια σουίτα διαγνωστικού ελέγχου για τον εντοπισμό και την ανάλυση των περιπτώσεων όπου το μοντέλο απέτυχε (False Positives και False Negatives), εξετάζοντας τα κοινά χαρακτηριστικά των λαθών.
+* **`17. Automated Documentation & Markdown Report Generator`**- Συνθέτει αυτόματα μια περιεκτική αναφορά σε μορφή Markdown (Agent1_Technical_Report.md) η οποία περιλαμβάνει συγκεντρωτικούς πίνακες μετρικών, υπερπαραμέτρους, αποτελέσματα conformal prediction και οδηγίες χρήσης.
+* **`18. Final Execution Orchestration, Logging, and Sanity Checks`**- Εκτελεί συνολικό έλεγχο ορθότητας (sanity checks) σε όλα τα ενδιάμεσα βήματα, διασφαλίζοντας την ακεραιότητα των δεδομένων και την απρόσκοπτη λειτουργία του κώδικα από την αρχή μέχρι το τέλος.
+* **`18.1 End-to-End Pipeline Execution Trigger`**- Εκκινεί την αυτοματοποιημένη, διαδοχική εκτέλεση ολόκληρου του pipeline από το αρχικό CSV έως την τελική αναφορά και τα γραφήματα.
+* **`18.2 System Validation & Pipeline Health Report`**- Ελέγχει τα logs εκτέλεσης, επαληθεύει ότι όλα τα αρχεία εξόδου (models, figures, metrics tables) έχουν δημιουργηθεί επιτυχώς και εκτυπώνει την τελική αναφορά κατάστασης (health report).
+* **`18.3 Pipeline Termination & Deployment Readiness Confirmation`**- Επιβεβαιώνει την επιτυχή ολοκλήρωση της ροής εργασίας (pipeline termination), πιστοποιώντας ότι το σύστημα είναι πλήρως έτοιμο για παραγωγική λειτουργία (deployment readiness) και ενσωμάτωση στο αποθετήριο.
 
-* 
-* **Κεφάλαιο 13 & 14 (Baseline Comparison & Publication-Grade Figures):** Ολοκληρώνει τη σύγκριση των baselines και σχεδιάζει όλα τα δημοσιεύσιμα γραφική παραστάσεις (ROC/PR καμπύλες, reliability diagrams, confusion matrices)[cite: 3].
-* **Κεφάλαιο 15:** Διεξάγει έλεγχο σταθερότητας του μοντέλου υπό μεταβαλλόμενες συνθήκες εισόδου και θορύβου.
-* **Κεφάλαιο 16:** Υλοποιεί την ανάλυση σπουδαιότητας χαρακτηριστικών για την ερμηνευσιμότητα των αποφάσεων.
-* **Κεφάλαιο 17:** Πραγματοποιεί δοκιμές ανθεκτικότητας (Stress Testing) του pipeline με τεχνητά διογκωμένα σφάλματα αισθητήρων.
-* **Κεφάλαιο 18:** Ενσωματώνει τη λογική αυτόματης ειδοποίησης για την επικοινωνία με τα επόμενα επίπεδα/πράκτορες.
-* **Κεφάλαιο 19:** Διαμορφώνει το τελικό πρωτόκολλο καταγραφής συμβάντων (Logging & Monitoring) σε πραγματικό χρόνο.
-* **Κεφάλαιο 20:** Ορίζει τις παραμέτρους επανεκπαίδευσης (Retraining Triggers) για την αντιμετώπιση του data drift.
-* **Κεφάλαιο 21:** Δημιουργεί τα unit tests και integration tests για την αυτοματοποιημένη επαλήθευση κώδικα (CI validation).
-* **Κεφάλαιο 22:** Προετοιμάζει το περιβάλλον εκτέλεσης σε Docker container και συντάσσει τις οδηγίες εγκατάστασης.
-* **Κεφάλαιο 23:** Ολοκληρώνει την τελική αναφορά επαλήθευσης και παραδίδει το πλήρες πακέτο έτοιμο για παραγωγή.
+---
 
 
 ## Μετρικά Απόδοσης Τελικού Μοντέλου (XGBoost)
