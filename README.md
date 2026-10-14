@@ -51,20 +51,28 @@ This repository contains the production-ready machine learning inference package
 
 * **`0. Imports & Global Config`** – Εισάγει τις απαραίτητες βιβλιοθήκες (`pandas`, `numpy`, `scikit-learn`, `xgboost`, κ.λπ.) και ορίζει τις παγκόσμιες ρυθμίσεις και το στυλ οπτικοποίησης.
 * **`1. Dataset Loading & Structural Preprocessing`** – Φορτώνει το αρχείο CSV, μετατρέπει τις ημερομηνίες σε datetime, ταξινομεί τα δεδομένα και καθαρίζει τα ονόματα των στηλών.
-* **`1.1 Exploratory Data Analysis (EDA)`** – Ελέγχει την κατανομή των βλαβών (`Diagnostic`), τους ελέγχους (`Control`) και τον εντοπισμό ελλιπών τιμών.
+  * **`1.1 Exploratory Data Analysis (EDA)`** – Ελέγχει την κατανομή των βλαβών (`Diagnostic`), τους ελέγχους (`Control`) και τον εντοπισμό ελλιπών τιμών.
 * **`2. Feature Engineering`** – Δημιουργεί έναν custom μετασχηματιστή (`FeatureEngineer`) για τον υπολογισμό νέων χαρακτηριστικών όπως η διαφορά θερμοκρασίας και το γινόμενο ροπής επί φθοράς.
-* **`2.1 Leakage-Safe Pipeline Construction`** – Κατασκευάζει ασφαλές `ImbPipeline` που ενσωματώνει binary δείκτες απουσίας, KNN imputer και τεχνικές εξισορρόπησης.
+  * **`2.1 Leakage-Safe Pipeline Construction`** – Κατασκευάζει ασφαλές `ImbPipeline` που ενσωματώνει binary δείκτες απουσίας, KNN imputer και τεχνικές εξισορρόπησης.
 * **`3. Target Definition`** – Ορίζει το binary target για τον Agent 1 (0 = No Failure, 1 = Predictable Failure) εξαιρώντας τα τυχαία σφάλματα.
 * **`4. Class Imbalance Strategy Comparison`** – Συγκρίνει στρατηγικές διαχείρισης ανισορροπίας κλάσεων χρησιμοποιώντας `GroupKFold` ανά σύστημα.
 * **`5. Baseline Model Comparison`** – Συγκρίνει βασικούς αλγορίθμους (Logistic Regression, Random Forest, XGBoost) ως προς την απόδοσή τους.
-* **`6. Rigorous Nested Cross-Validation`** – Εκτελεί εξωτερικό και εσωτερικό βρόχο επικύρωσης με `GroupKFold` και `GridSearchCV` για βέλτιστη ρύθμιση υπερπαραμέτρων.
+* **`6. Rigorous Nested Cross-Validation & Hyperparameter Optimization`** – Εκτελεί εξωτερικό και εσωτερικό βρόχο επικύρωσης με `GroupKFold` και `GridSearchCV` για βέλτιστη ρύθμιση υπερπαραμέτρων.
+  * **`6.1 Nested CV Execution & Performance Aggregation`** – Εκτελεί τον πλήρη βρόχο Nested CV ανά fold και συγκεντρώνει τα μετρικά αποτελέσματα απόδοσης.
 * **`7. Final Hyperparameter Optimization`** – Εφαρμόζει τελικό Grid Search στο σύνολο των δεδομένων και συλλέγει δεδομένα καμπυλών ανά fold.
 * **`8. Probability Calibration`** – Συγκρίνει πιθανότητες με μεθόδους `Sigmoid` και `Isotonic` βάσει Brier score και ECE.
-* **`9. Cost-Sensitive Decision Analysis`** – Υπολογίζει το βέλτιστο όριο απόφασης ($t^*$) με βάση το οικονομικό κόστος των $C_{FN}$ και $C_{FP}$.
-* **`10. Mondrian Conformal Prediction`** – Υλοποιεί προβλέψεις συμμόρφωσης ανά κλάση για έλεγχο κάλυψης και αβεβαιότητας.
+  * **`8.1 Fitted Calibration Models & Validation Curves`** – Εφαρμόζει τα μοντέλα καλιτραρίσματος και παράγει τις αντίστοιχες καμπύλες επικύρωσης/αξιοπιστίας.
+* **`9. Cost-Sensitive Decision Analysis & Optimal Threshold Selection`** – Υπολογίζει το βέλτιστο όριο απόφασης ($t^*$) με βάση το οικονομικό κόστος των $C_{FN}$ και $C_{FP}$.
+  * **`9.1 Cost Matrix Definition & Expected Loss Minimization`** – Ορίζει τον πίνακα κόστους και ελαχιστοποιεί την αναμενόμενη ζημία για τον καθορισμό του ορίου.
+  * **`9.2 Sensitivity Analysis on Cost Ratios`** – Αναλύει τη μεταβολή του βέλτιστου ορίου συναρτήσει διαφορετικών λόγων κόστους (Cost Ratios).
+  * **`9.3 Threshold Bootstrap Confidence Intervals`** – Υπολογίζει διαστήματα εμπιστοσύνης (Bootstrap CIs) για το βέλτιστο όριο απόφασης.
+* **`10. Mondrian Conformal Prediction Functions`** – Υλοποιεί προβλέψεις συμμόρφωσης ανά κλάση για έλεγχο κάλυψης και αβεβαιότητας.
+  * **`10.1 Nonconformity Measure Implementation`** – Ορίζει τη συνάρτηση μη-συμμόρφωσης βάσει των προβλεπόμενων πιθανοτήτων.
+  * **`10.2 Calibration Set P-Value Computation`** – Υπολογίζει τις τιμές p-values για το σύνολο βαθμονόμησης/συμμόρφωσης.
+  * **`10.3 Prediction Set Generation & Efficiency Metrics`** – Παράγει τα σύνολα πρόβλεψης (prediction sets) και υπολογίζει τους δείκτες αποδοτικότητας και κάλυψης.
 * **`11. Independent Test Evaluation`** – Εφαρμόζει πρωτόκολλο split-conformal και αξιολογεί το μοντέλο σε ανεξάρτητο σύνολο δοκιμών.
-* **`12. Publication-Grade Figure Definitions`** – Περιέχει συναρτήσεις οπτικοποίησης για τη δημιουργία επαγγελματικών γραφημάτων υψηλής ανάλυσης.
-* **`12.1 Execute and Render Figures`** – Εκτελεί τη μαζική παραγωγή, αποθήκευση και προβολή όλων των γραφημάτων σε μορφές PNG, PDF και SVG.
+* **`12. Publication-Grade Figure Definitions & Styling Functions`** – Περιέχει συναρτήσεις οπτικοποίησης για τη δημιουργία επαγγελματικών γραφημάτων υψηλής ανάλυσης.
+  * **`12.1 Execute and Render All Publication-Grade Figures`** – Εκτελεί τη μαζική παραγωγή, αποθήκευση και προβολή όλων των γραφημάτων σε μορφές PNG, PDF και SVG.
 
 * 
 * **Κεφάλαιο 13 & 14 (Baseline Comparison & Publication-Grade Figures):** Ολοκληρώνει τη σύγκριση των baselines και σχεδιάζει όλα τα δημοσιεύσιμα γραφική παραστάσεις (ROC/PR καμπύλες, reliability diagrams, confusion matrices)[cite: 3].
