@@ -38,30 +38,35 @@ This repository contains the production-ready machine learning inference package
 * **Εκτέλεση Σεναρίου Δοκιμής:** Τρέξτε απευθείας το αρχείο επαλήθευσης (`test_agent1.py`) από τη γραμμή εντολών, επιτρέποντας στο σύστημα να φορτώσει αυτόματα το μοντέλο και να εμφανίσει τα αποτελέσματα στην οθόνη.
 
 ---
-
-## Δομή Repository
 ## 📂 Repository Structure / Δομή Αποθετηρίου
-Η τρέχουσα δομή του GitHub repository σας, όπως φαίνεται από τα αρχεία που έχουν ανέβει[cite: 3]:
 
-├── Agent1_pack/                     # Φάκελος πακέτου Agent 1 (predict.py, test, pkl, requirements)
-├── Data/                            # Dataset used in Agent1 pipeline[cite: 3]
-├── pipeline/                        # Φάκελος υλοποίησης pipeline
-├── README.md                        # Η κεντρική τεκμηρίωση του έργου[cite: 3]
-└── respond                          # Αρχείο απόκρισης προς τον καθηγητή[cite: 3]
+* **`Agent1_pack/`** - Ο φάκελος που περιέχει τα βασικά αρχεία παραγωγής του Agent 1 (`predict.py`, `test_agent1.py`, το `.pkl` και το `requirements.txt`).
+* **`Data/`** - Ο φάκελος με τα δεδομένα (dataset) που χρησιμοποιήθηκαν στο pipeline του Agent 1.
+* **`pipeline/`** - Ο φάκελος που φιλοξενεί την υλοποίηση του pipeline.
+* **`README.md`** - Η κεντρική τεκμηρίωση και οδηγός χρήσης του έργου.
+* **`respond`** - Το αρχείο με τις απαντήσεις και την τεκμηρίωση προς τον καθηγητή. 
 ---
 
-## Περίληψη Κεφαλαίων Pipeline (Agent 1)
+## ⚙️ Code Structure / Δομή Κώδικα
 
-* **Κεφάλαιο 0 (Imports & Global Configuration):** Πραγματοποιεί την εισαγωγή των βασικών βιβλιοθηκών, ορίζει τις global παραμέτρους (`RANDOM_STATE`, `RAW_SENSORS`, `TYPE_MAP`) και ρυθμίζει την εμφάνιση των γραφημάτων μαζί με τη συνάρτηση αποθήκευσης (`save_figure`)[cite: 3].
-* **Κεφάλαιο 1 & 1.1 (Dataset Loading & EDA):** Φορτώνει το dataset μέσω της συνάρτησης `load_pmdi` και εκτελεί Exploratory Data Analysis (EDA) για την ανάλυση κατανομών, ελέγχων (`Control`) και τον εντοπισμό ελλιπών τιμών.
-* **Κεφάλαιο 2 (Feature Engineering & Leakage-Safe Pipeline):** Υλοποιεί τον υπολογισμό χαρακτηριστικών (`Power_W`, `Temp_diff_K`) μέσω `FunctionTransformer` και δημιουργεί μια ασφαλή ροή (imputation, features, SMOTE, ταξινόμηση).
-* **Κεφάλαιο 3 (Target Definition):** Ορίζει το binary target (εξαιρώντας τα `Random Failures` από την εκπαίδευση του Agent 1) για την ορθή πρόβλεψη των βλαβών[cite: 3].
-* **Κεφάλαιο 4 & 5 (Class Imbalance & Baseline Model Comparison):** Συγκρίνει στρατηγικές αντιμετώπισης ανισορροπίας κλάσεων με 5-fold stratified CV και αξιολογεί βασικά μοντέλα (Logistic Regression, Random Forest, XGBoost).
-* **Κεφάλαιο 6 & 7 (Nested CV & Hyperparameter Optimization):** Εκτελεί Nested Cross-Validation, συλλέγει καμπύλες ανά fold και πραγματοποιεί βελτιστοποίηση υπερπαραμέτρων (`GridSearchCV`)[cite: 3].
-* **Κεφάλαιο 8 (Probability Calibration):** Υπολογίζει το ECE και τις out-of-fold πιθανότητες για τη σύγκριση Uncalibrated, Sigmoid και Isotonic calibration[cite: 3].
-* **Κεφάλαιο 9 (Cost-Sensitive Decision Analysis):** Εφαρμόζει συναρτήσεις κόστους (`cost_curve`, `cost_sensitivity`) για τον υπολογισμό του βέλτιστου threshold βάσει του κόστους εσφαλμένων προβλέψεων ($C_{FN}$ vs $C_{FP}$)[cite: 3].
-* **Κεφάλαιο 10 (Conformal Prediction):** Ενσωματώνει μεθόδους Conformal Prediction (`conformal_qhat`, `conformal_sweep`) για τον έλεγχο κάλυψης και διαχείρισης της αβεβαιότητας στο test set[cite: 3].
-* **Κεφάλαιο 11 & 12 (Cost-Threshold Selection & Deployment Package):** Εφαρμόζει το βέλτιστο threshold στο ανεξάρτητο test set, υπολογίζει το συνολικό κόστος και δημιουργεί το τελικό πακέτο deployment (`agent1_validated_package.pkl`)[cite: 3].
+* **`0. Imports & Global Config`** – Εισάγει τις απαραίτητες βιβλιοθήκες (`pandas`, `numpy`, `scikit-learn`, `xgboost`, κ.λπ.) και ορίζει τις παγκόσμιες ρυθμίσεις και το στυλ οπτικοποίησης.
+* **`1. Dataset Loading & Structural Preprocessing`** – Φορτώνει το αρχείο CSV, μετατρέπει τις ημερομηνίες σε datetime, ταξινομεί τα δεδομένα και καθαρίζει τα ονόματα των στηλών.
+* **`1.1 Exploratory Data Analysis (EDA)`** – Ελέγχει την κατανομή των βλαβών (`Diagnostic`), τους ελέγχους (`Control`) και τον εντοπισμό ελλιπών τιμών.
+* **`2. Feature Engineering`** – Δημιουργεί έναν custom μετασχηματιστή (`FeatureEngineer`) για τον υπολογισμό νέων χαρακτηριστικών όπως η διαφορά θερμοκρασίας και το γινόμενο ροπής επί φθοράς.
+* **`2.1 Leakage-Safe Pipeline Construction`** – Κατασκευάζει ασφαλές `ImbPipeline` που ενσωματώνει binary δείκτες απουσίας, KNN imputer και τεχνικές εξισορρόπησης.
+* **`3. Target Definition`** – Ορίζει το binary target για τον Agent 1 (0 = No Failure, 1 = Predictable Failure) εξαιρώντας τα τυχαία σφάλματα.
+* **`4. Class Imbalance Strategy Comparison`** – Συγκρίνει στρατηγικές διαχείρισης ανισορροπίας κλάσεων χρησιμοποιώντας `GroupKFold` ανά σύστημα.
+* **`5. Baseline Model Comparison`** – Συγκρίνει βασικούς αλγορίθμους (Logistic Regression, Random Forest, XGBoost) ως προς την απόδοσή τους.
+* **`6. Rigorous Nested Cross-Validation`** – Εκτελεί εξωτερικό και εσωτερικό βρόχο επικύρωσης με `GroupKFold` και `GridSearchCV` για βέλτιστη ρύθμιση υπερπαραμέτρων.
+* **`7. Final Hyperparameter Optimization`** – Εφαρμόζει τελικό Grid Search στο σύνολο των δεδομένων και συλλέγει δεδομένα καμπυλών ανά fold.
+* **`8. Probability Calibration`** – Συγκρίνει πιθανότητες με μεθόδους `Sigmoid` και `Isotonic` βάσει Brier score και ECE.
+* **`9. Cost-Sensitive Decision Analysis`** – Υπολογίζει το βέλτιστο όριο απόφασης ($t^*$) με βάση το οικονομικό κόστος των $C_{FN}$ και $C_{FP}$.
+* **`10. Mondrian Conformal Prediction`** – Υλοποιεί προβλέψεις συμμόρφωσης ανά κλάση για έλεγχο κάλυψης και αβεβαιότητας.
+* **`11. Independent Test Evaluation`** – Εφαρμόζει πρωτόκολλο split-conformal και αξιολογεί το μοντέλο σε ανεξάρτητο σύνολο δοκιμών.
+* **`12. Publication-Grade Figure Definitions`** – Περιέχει συναρτήσεις οπτικοποίησης για τη δημιουργία επαγγελματικών γραφημάτων υψηλής ανάλυσης.
+* **`12.1 Execute and Render Figures`** – Εκτελεί τη μαζική παραγωγή, αποθήκευση και προβολή όλων των γραφημάτων σε μορφές PNG, PDF και SVG.
+
+* 
 * **Κεφάλαιο 13 & 14 (Baseline Comparison & Publication-Grade Figures):** Ολοκληρώνει τη σύγκριση των baselines και σχεδιάζει όλα τα δημοσιεύσιμα γραφική παραστάσεις (ROC/PR καμπύλες, reliability diagrams, confusion matrices)[cite: 3].
 * **Κεφάλαιο 15:** Διεξάγει έλεγχο σταθερότητας του μοντέλου υπό μεταβαλλόμενες συνθήκες εισόδου και θορύβου.
 * **Κεφάλαιο 16:** Υλοποιεί την ανάλυση σπουδαιότητας χαρακτηριστικών για την ερμηνευσιμότητα των αποφάσεων.
