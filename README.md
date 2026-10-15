@@ -73,7 +73,7 @@ This repository contains the production-ready machine learning inference package
 * **`11. Independent Test Evaluation`** – Εφαρμόζει πρωτόκολλο split-conformal και αξιολογεί το μοντέλο σε ανεξάρτητο σύνολο δοκιμών.
 * **`12. Publication-Grade Figure Definitions & Styling Functions`** – Περιέχει συναρτήσεις οπτικοποίησης για τη δημιουργία επαγγελματικών γραφημάτων υψηλής ανάλυσης.
   * **`12.1 Execute and Render All Publication-Grade Figures`** – Εκτελεί τη μαζική παραγωγή, αποθήκευση και προβολή όλων των γραφημάτων σε μορφές PNG, PDF και SVG.
-* ** `13. Save Validated Agent 1 Deployment Package`** - Αποθηκεύει σε pkl αρχείο το εκπαιδευμένο βαθμονομημένο και δοκιμασμένο μοντέλο, τα χαρακτηριστικά και δεδομένα ( raw features , type map), τις παραμέτρους αβεβαιότητας και κόστους(t*=0.05, C_FN=10, C_FP=1, qhats, alpha=0.10).
+* **`13. Save Validated Agent 1 Deployment Package`** - Αποθηκεύει σε pkl αρχείο το εκπαιδευμένο βαθμονομημένο και δοκιμασμένο μοντέλο, τα χαρακτηριστικά και δεδομένα ( raw features , type map), τις παραμέτρους αβεβαιότητας και κόστους(t*=0.05, C_FN=10, C_FP=1, qhats, alpha=0.10).
 * **`14.Agent 1 Inference Class Definition`**- Διαβάζει το αρχείο pkl, παίρνει τα ωμά δεδομένα και εκτυπώνει την καλιμπραρισμένη πιθανότητα βάση το threshold, εκτυπώνει την δυαδική απόφαση και εφαρμόζει Mondrian Conformal Prediction για να μας πει πόσο σίγουρο είναι.
     * **`14.1 Execute Package Load Validation Test`**- Επιβεβαίωση φόρτωσης μέσω της κλάσης.
 * **`15. RNF Stress Test`**- Εκτελεί έναν έλεγχο αντοχής (stress test) τροφοδοτώντας το μοντέλο με τα δείγματα τυχαίων σφαλμάτων (Random Failures) που είχαν εξαιρεθεί από την εκπαίδευση, και υπολογίζει στατιστικά απόδοσης, ποσοστά ανίχνευσης και δείκτες αβεβαιότητας για αυτά..
