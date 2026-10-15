@@ -49,7 +49,7 @@ This repository contains the production-ready machine learning inference package
 
 ## ⚙️ Code Structure / Δομή Κώδικα
 
-* **`0. Imports & Global Config`** – Εισάγει τις απαραίτητες βιβλιοθήκες (`pandas`, `numpy`, `scikit-learn`, `xgboost`, κ.λπ.) και ορίζει τις παγκόσμιες ρυθμίσεις και το στυλ οπτικοποίησης.
+* **`0. Imports & Global Config`** – Εισάγει τις απαραίτητες βιβλιοθήκες και ορίζει τις παγκόσμιες ρυθμίσεις και το στυλ οπτικοποίησης.
 * **`1. Dataset Loading & Structural Preprocessing`** – Φορτώνει το αρχείο CSV, μετατρέπει τις ημερομηνίες σε datetime, ταξινομεί τα δεδομένα.
   * **`1.1 Exploratory Data Analysis (EDA)`** – Ελέγχει την κατανομή των βλαβών (`Diagnostic`), τους ελέγχους (`Control`) και τον εντοπισμό ελλιπών τιμών.
 * **`2. Feature Engineering`** – Δημιουργεί έναν custom μετασχηματιστή (`FeatureEngineer`) για τον υπολογισμό νέων χαρακτηριστικών όπως η διαφορά θερμοκρασίας και το γινόμενο ροπής επί φθοράς.
@@ -60,31 +60,29 @@ This repository contains the production-ready machine learning inference package
 * **`6. Rigorous Nested Cross-Validation & Hyperparameter Optimization`** – Εκτελεί εξωτερικό και εσωτερικό βρόχο επικύρωσης με `GroupKFold` και `GridSearchCV` για βέλτιστη ρύθμιση υπερπαραμέτρων.
   * **`6.1 Nested CV Execution & Performance Aggregation`** – Εκτελεί τον πλήρη βρόχο Nested CV ανά fold και συγκεντρώνει τα μετρικά αποτελέσματα απόδοσης.
 * **`7. Final Hyperparameter Optimization`** – Εφαρμόζει τελικό Grid Search στο σύνολο των δεδομένων και συλλέγει δεδομένα καμπυλών ανά fold.
-* **`8. Probability Calibration`** – Συγκρίνει πιθανότητες με μεθόδους `Sigmoid` και `Isotonic` βάσει Brier score και ECE.
-  * **`8.1 Fitted Calibration Models & Validation Curves`** – Εφαρμόζει τα μοντέλα καλιμπραρίσματος και παράγει τις αντίστοιχες καμπύλες επικύρωσης/αξιοπιστίας.
-* **`9. Cost-Sensitive Decision Analysis & Optimal Threshold Selection`** – Υπολογίζει το βέλτιστο όριο απόφασης ($t^*$) με βάση το οικονομικό κόστος των $C_{FN}$ και $C_{FP}$.
-  * **`9.1 Cost Matrix Definition & Expected Loss Minimization`** – Ορίζει τον πίνακα κόστους και ελαχιστοποιεί την αναμενόμενη ζημία για τον καθορισμό του ορίου.
+* **`8. Probability Calibration`** – Συγκρίνει πιθανότητες με μεθόδους`Uncalibrated`, `Sigmoid` και `Isotonic` βάσει Brier score και ECE.
+  * **`8.1 Fitted Calibration Models & Validation Curves`** – Εφαρμόζει τα μοντέλα καλιμπραρίσματος και παράγει τις αντίστοιχες καμπύλες επικύρωσης/αξιοπιστίας. Επιλέγουμε την `Isotonic`.
+* **`9. Cost-Sensitive Decision Analysis & Optimal Threshold Selection`** – Υπολογίζει το βέλτιστο όριο απόφασης `t*` με βάση το οικονομικό κόστος των C_FN=10 και C_FP=1.
+  * **`9.1 Cost Matrix Definition & Expected Loss Minimization`** – Αξιολογεί το t* και κάνει ανάλυση ευσαισθησίας.
   * **`9.2 Sensitivity Analysis on Cost Ratios`** – Αναλύει τη μεταβολή του βέλτιστου ορίου συναρτήσει διαφορετικών λόγων κόστους (Cost Ratios).
   * **`9.3 Threshold Bootstrap Confidence Intervals`** – Υπολογίζει διαστήματα εμπιστοσύνης (Bootstrap CIs) για το βέλτιστο όριο απόφασης.
-* **`10. Mondrian Conformal Prediction Functions`** – Υλοποιεί προβλέψεις συμμόρφωσης ανά κλάση για έλεγχο κάλυψης και αβεβαιότητας.
-  * **`10.1 Nonconformity Measure Implementation`** – Ορίζει τη συνάρτηση μη-συμμόρφωσης βάσει των προβλεπόμενων πιθανοτήτων.
-  * **`10.2 Calibration Set P-Value Computation`** – Υπολογίζει τις τιμές p-values για το σύνολο βαθμονόμησης/συμμόρφωσης.
-  * **`10.3 Prediction Set Generation & Efficiency Metrics`** – Παράγει τα σύνολα πρόβλεψης (prediction sets) και υπολογίζει τους δείκτες αποδοτικότητας και κάλυψης.
+* **`10. Mondrian Conformal Prediction Functions`** – Υλοποιεί προβλέψεις συμμόρφωσης ανά κλάση (ξεχωριστά q_hat) για έλεγχο κάλυψης και αβεβαιότητας.
+  * **`10.1 Execution of Mondrian Conformal Uncertainty & Coverage Sweep`** – Εκτυπώνει αποτελέσματα για διάφορα alpha (0.010 , 0.3).
+  * **`10.2 Proper Mondrian Split-Conformal Evaluation Protocol`** – Χωρίζει τα δεδομένα σε 3 σετ: `training`, `conformal calibration` και `independent test`. Εκπαιδεύει calibrated weighted XGBoost μόνο στο training set. Υπολογίζει ξεχωριστά q_hat ανά κλάση μόνο στο conformal calibration set. Ελέγχει κάλυψη (συνολική και ανά κλάση) και prediction-set behavior μόνο στο independent test set.
+  * **`10.3 Execution and Storage of Mondrian Split-Conformal Evaluation Results`** – Εκτελεί, εκτυπώνει και αποθηκεύει τα αποτελέσματα.
 * **`11. Independent Test Evaluation`** – Εφαρμόζει πρωτόκολλο split-conformal και αξιολογεί το μοντέλο σε ανεξάρτητο σύνολο δοκιμών.
 * **`12. Publication-Grade Figure Definitions & Styling Functions`** – Περιέχει συναρτήσεις οπτικοποίησης για τη δημιουργία επαγγελματικών γραφημάτων υψηλής ανάλυσης.
   * **`12.1 Execute and Render All Publication-Grade Figures`** – Εκτελεί τη μαζική παραγωγή, αποθήκευση και προβολή όλων των γραφημάτων σε μορφές PNG, PDF και SVG.
-* ** `13. Advanced Data Persistence & Artifact Serialization Pipeline`** - Ορίζει μηχανισμούς και συναρτήσεις για την ασφαλή αποθήκευση, συμπίεση και διαχείριση όλων των εκπαιδευμένων μοντέλων, των transformer pipelines, των καμπυλών και των serialised αντικειμένων σε αρχεία (π.χ. με joblib και pickle).
-  * **`13.1 Execute Full Artifact Serialization`**-Εκτελεί την οριστική αποθήκευση όλων των παραγόμενων αρχείων, μοντέλων και διαμερισμάτων δεδομένων στον τοπικό φάκελο εργασίας για μελλοντική επαναχρησιμοποίηση.
-* **`14. Integrated Real-Time Inference Wrapper (Agent 1 Prediction Engine)`**- Δημιουργεί μια ενοποιημένη κλάση/συνάρτηση wrapper (Agent1InferenceEngine) η οποία αναλαμβάνει την αυτόματη επεξεργασία νέων δεδομένων εισόδου, εφαρμόζει τους μετασχηματισμούς, υπολογίζει τις βαθμονομημένες πιθανότητες και παρέχει την τελική απόφαση βάσει του βέλτιστου ορίου κόστους ($t^*$).
-* **`14.1 Run Inference Engine on Sample Holdout Data`**- Δοκιμάζει το σύστημα inference σε δείγματα από το holdout/test set, επιβεβαιώνοντας την ορθότητα παραγωγής προβλέψεων και εκτιμήσεων αβεβαιότητας σε πραγματικό χρόνο.
-* **`15. Comprehensive Model Explainability & Feature Importance (SHAP Analysis)`**- Εφαρμογή ανάλυσης SHAP (SHapley Additive exPlanations) για το τελικό εκπαιδευμένο μοντέλο XGBoost, εξάγοντας τόσο τις παγκόσμιες (global) όσο και τις τοπικές (local) τιμές συνεισφοράς των χαρακτηριστικών.
-* **`15.1 Generate and Save SHAP Summary & Dependence Plots`**- Παράγει και αποθηκεύει τα αντίστοιχα διαγράμματα SHAP (summary plots, bar plots και dependence plots) για την ερμηνευσιμότητα των αποφάσεων του μοντέλου πρόβλεψης αστοχίας.
-* **`16. Error Analysis & Edge Case Misclassification Diagnostic Suite`**- Δημιουργεί μια σουίτα διαγνωστικού ελέγχου για τον εντοπισμό και την ανάλυση των περιπτώσεων όπου το μοντέλο απέτυχε (False Positives και False Negatives), εξετάζοντας τα κοινά χαρακτηριστικά των λαθών.
-* **`17. Automated Documentation & Markdown Report Generator`**- Συνθέτει αυτόματα μια περιεκτική αναφορά σε μορφή Markdown (Agent1_Technical_Report.md) η οποία περιλαμβάνει συγκεντρωτικούς πίνακες μετρικών, υπερπαραμέτρους, αποτελέσματα conformal prediction και οδηγίες χρήσης.
-* **`18. Final Execution Orchestration, Logging, and Sanity Checks`**- Εκτελεί συνολικό έλεγχο ορθότητας (sanity checks) σε όλα τα ενδιάμεσα βήματα, διασφαλίζοντας την ακεραιότητα των δεδομένων και την απρόσκοπτη λειτουργία του κώδικα από την αρχή μέχρι το τέλος.
-* **`18.1 End-to-End Pipeline Execution Trigger`**- Εκκινεί την αυτοματοποιημένη, διαδοχική εκτέλεση ολόκληρου του pipeline από το αρχικό CSV έως την τελική αναφορά και τα γραφήματα.
-* **`18.2 System Validation & Pipeline Health Report`**- Ελέγχει τα logs εκτέλεσης, επαληθεύει ότι όλα τα αρχεία εξόδου (models, figures, metrics tables) έχουν δημιουργηθεί επιτυχώς και εκτυπώνει την τελική αναφορά κατάστασης (health report).
-* **`18.3 Pipeline Termination & Deployment Readiness Confirmation`**- Επιβεβαιώνει την επιτυχή ολοκλήρωση της ροής εργασίας (pipeline termination), πιστοποιώντας ότι το σύστημα είναι πλήρως έτοιμο για παραγωγική λειτουργία (deployment readiness) και ενσωμάτωση στο αποθετήριο.
+* ** `13. Save Validated Agent 1 Deployment Package`** - Αποθηκεύει σε pkl αρχείο το εκπαιδευμένο βαθμονομημένο και δοκιμασμένο μοντέλο, τα χαρακτηριστικά και δεδομένα ( raw features , type map), τις παραμέτρους αβεβαιότητας και κόστους(t*=0.05, C_FN=10, C_FP=1, qhats, alpha=0.10).
+* **`14.Agent 1 Inference Class Definition`**- Διαβάζει το αρχείο pkl, παίρνει τα ωμά δεδομένα και εκτυπώνει την καλιμπραρισμένη πιθανότητα βάση το threshold, εκτυπώνει την δυαδική απόφαση και εφαρμόζει Mondrian Conformal Prediction για να μας πει πόσο σίγουρο είναι.
+* **`14.1 Execute Package Load Validation Test`**- Επιβεβαίωση φόρτωσης μέσω της κλάσης.
+* **`15. RNF Stress Test`**- Εκτελεί έναν έλεγχο αντοχής (stress test) τροφοδοτώντας το μοντέλο με τα δείγματα τυχαίων σφαλμάτων (Random Failures) που είχαν εξαιρεθεί από την εκπαίδευση, και υπολογίζει στατιστικά απόδοσης, ποσοστά ανίχνευσης και δείκτες αβεβαιότητας για αυτά..
+* **`16. Final Validated Results Summary Table`**- Δημιουργεί έναν τελικό, συγκεντρωτικό πίνακα αναφοράς (summary table) που περιλαμβάνει όλες τις βασικές μετρήσεις απόδοσης του μοντέλου από το Nested-CV, τα αποτελέσματα στο ανεξάρτητο test set, τις παραμέτρους κόστους και τα ποσοστά κάλυψης του conformal prediction.
+* **`17. Main Execution Workflow Block for Agent 1 Pipeline`**- Εκτελεί την κεντρική ροή εργασίας (main workflow) ολόκληρου του pipeline για τον Agent 1, εκτελώντας διαδοχικά την εκπαίδευση, τη βελτιστοποίηση υπερπαραμέτρων, τη βαθμονόμηση, την ανάλυση κόστους, το split-conformal validation και αποθηκεύοντας τελικά το έτοιμο πακέτο μοντέλου.
+* **`18. Write Standalone Inference Script (predict.py) for Production Deployment`**- Δημιουργεί και αποθηκεύει ένα αυτόνομο script παραγωγής (predict.py) το οποίο ενσωματώνει όλη τη λογική φόρτωσης του μοντέλου, τους μετασχηματιστές και την κλάση inference για την αξιολόγηση νέων δεδομένων και τη διασύνδεση με τον Agent 2.
+    * **`18.1 Import and Test Prediction Module`**- Δημιουργεί και αποθηκεύει ένα script ελέγχου λειτουργίας (test_agent1.py) το οποίο εισάγει τη συνάρτηση πρόβλεψης και πραγματοποιεί έναν έλεγχο  με δοκιμαστικά δεδομένα μηχανής.
+    * **`18.2 Write Package Dependencies (requirements.txt) for Deployment`**- Δημιουργεί και αποθηκεύει το αρχείο εξαρτήσεων requirements.txt στο πακέτο παραγωγής, καταγράφοντας όλες τις απαραίτητες βιβλιοθήκες Python που απαιτούνται για τη λειτουργία του μοντέλου.
+    * **`18.3 Compress Deployment Package & Trigger Download (.zip)`**-Συμπιέζει ολόκληρο τον φάκελο του πακέτου παραγωγής (agent1_package) σε αρχείο μορφής .zip και ενεργοποιεί την αυτόματη λήψη του (download) στον υπολογιστή μέσω του Google Colab. 
 
 ---
 
