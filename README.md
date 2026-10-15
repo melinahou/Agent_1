@@ -87,18 +87,21 @@ This repository contains the production-ready machine learning inference package
 ---
 
 
-## Μετρικά Απόδοσης Τελικού Μοντέλου (XGBoost)
+## Μετρικά Απόδοσης Τελικού Μοντέλου 
 Τα τελικά αποτελέσματα αξιολόγησης του μοντέλου στο ανεξάρτητο test set είναι:
-- **Precision**: 0.7792
-- **Recall**: 0.9091
-- **F1-score**: 0.8392
-- **ROC-AUC**: 0.995
+- **Precision**: 0.5378
+- **Recall**: 0.9697
+- **F1-score**: 0.6919
+- **Threshold**: 0.0493
+* **`Confusion matrix`**
+- **TN** : 1876
+- **FP** : 55
+- **FN** :2
+- **TP** : 64
 
-## Βέλτιστο Threshold & Κατώφλι Απόφασης
-- **Cost-optimal Threshold**: 0.15 (βελτιστοποιημένο με βάση το κόστος των ψευδώς αρνητικών και θετικών προβλέψεων).
-- **Conformal Prediction (alpha=0.1)**: qhat = 0.0071, με empirical coverage 90.49%.
+* **Conformal alpha** : 0.10
+* **No Failure q_hat** : 0.02
+* **Failure q_hat** : 0.8758
 
-## Οδηγίες Χρήσης (Quickstart)
-Για να τρέξετε τον κώδικα παραγωγής:
-1. Εγκαταστήστε τις απαιτούμενες βιβλιοθήκες: `pip install -r agent1_validated_package/requirements.txt`
-2. Εκτελέστε το script πρόβλεψης: `python agent1_validated_package/predict.py`
+
+
