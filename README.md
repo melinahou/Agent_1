@@ -84,30 +84,31 @@ The public function `predict_failure(machine_data)` returns a dictionary with:
 
 The development notebook covers:
 
-1. Data preparation, feature engineering, and group-aware validation.
-2. Class imbalance handling, baseline models, and hyperparameter optimization.
-3. Probability calibration and reliability assessment.
-4. Cost-sensitive threshold selection.
-5. Mondrian split-conformal uncertainty estimation.
-6. Independent test evaluation and publication-oriented figures.
-7. Model serialization, deployment, and notebook-versus-deployment consistency checks.
+1. Data preparation, feature engineering, and group-aware validation ( 1,2,3,4.2).
+2. Class imbalance handling, baseline models, and hyperparameter optimization ( 4,5,6).
+3. Probability calibration and reliability assessment (7).
+4. Cost-sensitive threshold selection (8,10).
+5. Mondrian split-conformal uncertainty estimation (9).
+6. Independent test evaluation and publication-oriented figures (10,11,13).
+7. Model serialization, deployment, and notebook-versus-deployment consistency checks (12,14,15,16).
 
 The deployed model uses pipeline-based preprocessing and feature engineering, XGBoost classification, isotonic calibration, and saved cost/conformal parameters. The notebook contains the experimental methodology and evaluation outputs; the standalone package is for inference.
 
-### Deployment consistency checks
 
-Notebook-side regression tests compare packaged inference with the notebook model for probabilities, conformal prediction sets, and cost-based decisions. Tests also cover missing sensor values, a class-balanced subset, and `L/M/H` input compatibility.
+### Deployment Consistency and Validation Checks
 
-These checks establish **implementation consistency for the tested inputs**, not a general guarantee of predictive performance or conformal coverage. Consult the notebook's independent evaluation for those results.
+To verify the consistency of the deployment implementation with the original notebook, a series of tests was performed to ensure that the standalone Agent 1 produces results consistent with the original notebook.
 
-## Reproducibility and limitations
+The tests verify:
 
-- The serialized model depends on compatible Python library versions. See [`requirements.txt`](Agent1_pack/requirements.txt); some dependencies are not version-pinned.
-- Keep the custom component module alongside the serialized model when loading it.
-- The training dataset is not needed to run packaged inference.
-- Predictions are statistical estimates and should not be treated as guarantees of equipment failure.
-- This repository documents a research prototype and its inference workflow; operational use requires additional validation in the intended environment.
+- **Prediction consistency:** Agreement between the notebook and deployment model in predicted failure probabilities.
+- **Decision consistency:** Agreement in cost-sensitive failure decisions and Agent 2 routing.
+- **Uncertainty consistency:** Agreement in Mondrian conformal prediction sets.
+- **Missing data handling:** Correct operation when numerical sensor values are missing.
+- **Class-balanced testing:** Consistency across a test sample containing equal numbers of failure and non-failure cases.
+- **Input compatibility:** Correct handling of machine types `L`, `M`, and `H`, including their numerical representations.
 
-## Project context
+All performed deployment consistency tests passed without prediction-set or decision mismatches.
 
-This repository implements **Agent 1** of a multi-agent predictive maintenance research project. Agent 1 handles binary failure detection and uncertainty estimation; downstream diagnosis is reserved for Agent 2.
+**Note:** These tests confirm that the deployed implementation reproduces the notebook's behavior on the tested samples. Predictive performance and conformal coverage are evaluated separately in the notebook using the independent test set.
+
