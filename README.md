@@ -15,7 +15,7 @@ Agent 1 is a machine-learning component for predictive maintenance of industrial
 
 | Path | Purpose |
 | --- | --- |
-| [`pipeline/`](pipeline/) | Model development, validation, and deployment-generation notebook |
+| [`pipeline_Agent1.ipynb`](pipeline_Agent1.ipynb) | Model development, validation, and deployment-generation notebook |
 | [`Agent1_pack/`](Agent1_pack/) | Standalone inference package, including the trained model |
 | [`Data/`](Data/) | Dataset used by the project |
 | [`Agent1_pack/README.md`](Agent1_pack/README.md) | Detailed installation, inference, and output documentation |
