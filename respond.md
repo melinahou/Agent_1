@@ -6,27 +6,42 @@
 
 ---
 
-## 1. RNF (Random Failure) & Tool Wear Handling 
-Περιγραφή προβλημάτων:
-* Τα Random Failures (RNF): Είναι τυχαίες βλάβες και δεν μπορούν να προβλεφθούν (το ROC-AUC ήταν 0.44), 
-οπότε αφαιρούμε την προσπάθεια πρόβλεψής τους. 
-* Το Tool Wear: Φθείρεται τυχαία (στα 200–240 min) και δεν χρειάζεται να το "κυνηγάμε" 
-με άσκοπο hyperparameter tuning, αλλά να το εξηγήσουμε θεωρητικά.
 
-* **Σημεία στον Κώδικα:**
-   1) Τμήμα 3 Target Definition (Excluding Random Failures for Agent 1 Training): Στον κώδικα 
-ορίσαμε ρητά ότι ο Agent 1 εκπαιδεύεται προβλέποντας μόνο τις προβλέψιμες αστοχίες 
-(Predictable Failure), εξαιρώντας πλήρως τα Random Failures από το training set, ώστε να μην 
-προσπαθεί το μοντέλο να μάθει θόρυβο.
-   2) Τμήμα 15 RNF Stress Test:  Μετατροπή του RNF σε Stress Test / Baseline Robustness Check 
-Αντί να προσπαθήσουμε να βελτιστοποιήσουμε το μοντέλο για τα RNF, μετατρέψαμε την αξιολόγησή τους 
-σε ένα stress test ασφαλείας. Όπως είδαμε και στον κώδικα, τα τροφοδοτούμε εκτός εκπαίδευσης απλώς 
-για να καταγράψουμε τη συμπεριφορά τους και να αποδείξουμε εμπειρικώς ότι το σύστημα δικαιώνει την 
-παρατήρηση του καθηγητή (ότι δηλαδή η πρόβλεψή τους δεν είναι εφικτή / "prediction not legitimate 
-by default").
-    3) Τμήματα 2 και 2.1 Feature Engineering & Leakage-Safe Pipeline: Αντί για τυφλό tuning πάνω στη 
-φθορά εργαλείου, διαχειριστήκαμε τα χαρακτηριστικά μέσω συστηματικών pipelines και missing indicators, 
-αφήνοντας το XGBoost να διαχειριστεί τη μη γραμμική τους φύση χωρίς υπερπροσαρμογή (overfitting).
+## 1. Random Failures (RNF) & Tool Wear Handling
+
+### Original Issue
+The AI4I dataset includes Random Failures (RNF), which do not follow the same predictable patterns as other machine failure mechanisms.
+
+Additionally, tool wear is a relevant predictor of machine failure, but its relationship with failure should be modeled without introducing unnecessary feature-specific hyperparameter optimization.
+
+### Implemented Changes
+
+**1. Exclusion of Random Failures from Model Training**
+
+- Random Failures are excluded from the binary classification training target.
+- Agent 1 focuses on predicting failure mechanisms considered predictable from the available sensor measurements.
+- This distinction is implemented in **Chapter 3 — Target Definition and Failure Label Preparation**.
+
+**2. Random Failure Robustness Assessment**
+
+- Excluded Random Failure observations are subsequently used for a separate robustness assessment.
+- The objective is to examine how the trained model behaves when presented with failure events outside its primary training target.
+- This analysis is implemented in **Chapter 13.2 — Robustness Assessment Using Excluded Random Failures**.
+- The results are interpreted as a stress test rather than as evidence of reliable Random Failure prediction.
+
+**3. Tool Wear Feature Handling**
+
+- Tool wear is retained as an input feature (`Tool_wear_min`).
+- Its interaction with torque is represented through the engineered feature `Torque_x_Wear`.
+- Feature engineering is integrated into the preprocessing pipeline to ensure consistent transformations during training and inference.
+- The relevant implementation is documented in **Chapter 2 — Feature Engineering and Leakage-Safe Pipeline**.
+
+### Outcome
+
+Agent 1 is trained to identify predictable machine failures using the available operating measurements, while Random Failures are evaluated separately through a robustness assessment.
+
+Tool wear remains part of the model's input feature set, including its interaction with torque, without requiring a separate tool-wear-specific prediction model.
+
 
 ---
 
