@@ -186,24 +186,15 @@ Formal coverage guarantees depend on the relevant exchangeability assumptions.
 
 The development notebook is organized into 16 parts, covering the complete workflow from data preparation to standalone deployment.
 
-| Notebook Part | Description |
-| --- | --- |
-| Part 1 | Data preparation, shared components and exploratory data analysis |
-| Part 2 | Feature engineering and leakage-safe pipeline construction |
-| Part 3 | Target definition and group-disjoint development/test splitting |
-| Part 4 | Class imbalance handling and group-aware model comparison |
-| Part 5 | Baseline machine learning model comparison |
-| Part 6 | Nested cross-validation and hyperparameter optimization |
-| Part 7 | Probability calibration comparison and reliability assessment |
-| Part 8 | Development-only cost-sensitive decision analysis |
-| Part 9 | Mondrian conformal prediction, uncertainty quantification and final model fitting |
-| Part 10 | Final cost-sensitive threshold selection and descriptive cluster bootstrap analysis |
-| Part 11 | Publication-grade visualizations and scientific reporting |
-| Part 12 | Model packaging, reference case generation and standalone inference |
-| Part 13 | Development-only model evaluation and random failure stress testing |
-| Part 14 | Automated regression testing, deployment dependencies and documentation |
-| Part 15 | Notebook-to-deployment consistency, input validation and intentional regression failure testing |
-| Part 16 | Final deployment package compression and export |
+The development notebook covers:
+
+1. Data preparation, feature engineering, pipeline construction and group-disjoint data splitting (1, 2, 3).
+2. Class imbalance handling, baseline model comparison and hyperparameter optimization (4, 5, 6).
+3. Probability calibration comparison and reliability assessment (7).
+4. Cost-sensitive decision analysis, final threshold selection and statistical uncertainty estimation (8, 10).
+5. Mondrian conformal prediction, uncertainty quantification and final model fitting (9).
+6. Development-only evaluation, scientific visualizations and random failure stress testing (11, 13).
+7. Model serialization, standalone inference, automated regression testing, deployment consistency and package export (12, 14, 15, 16).
 
 The final deployed model combines pipeline-based preprocessing, temperature difference feature engineering, Plain XGBoost classification, raw probability estimation, Mondrian conformal prediction and cost-sensitive decision-making.
 
