@@ -1,0 +1,2042 @@
+[
+  {
+    "case_id": 1,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 2861.0,
+      "Torque_Nm": 4.6,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.946086049079895,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 2,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 2270.0,
+      "Torque_Nm": 14.6,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.2705176770687103,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 3,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": 303.6,
+      "Process_temperature_K": 311.8,
+      "Rotational_speed_rpm": 1222.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.9852214455604553,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 4,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 2760.0,
+      "Torque_Nm": 8.0,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.946086049079895,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 5,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": 303.4,
+      "Process_temperature_K": 311.8,
+      "Rotational_speed_rpm": 1341.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.9889262914657593,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 6,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 75.4,
+      "Tool_wear_min": 172.0
+    },
+    "true_label": 1,
+    "expected_probability": 0.8079841136932373,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 7,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": 303.3,
+      "Process_temperature_K": 311.3,
+      "Rotational_speed_rpm": 1350.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.9889262914657593,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 8,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": 303.3,
+      "Process_temperature_K": 311.6,
+      "Rotational_speed_rpm": 1337.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.9889262914657593,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 9,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 60.1,
+      "Tool_wear_min": 212.0
+    },
+    "true_label": 1,
+    "expected_probability": 0.9835360050201416,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 10,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 41.9,
+      "Tool_wear_min": 221.0
+    },
+    "true_label": 1,
+    "expected_probability": 0.39799949526786804,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 11,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 2579.0,
+      "Torque_Nm": 12.5,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.946086049079895,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 12,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 2564.0,
+      "Torque_Nm": 12.8,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.9293069243431091,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 13,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 57.3,
+      "Tool_wear_min": 204.0
+    },
+    "true_label": 1,
+    "expected_probability": 0.9846494793891907,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 14,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": 303.2,
+      "Process_temperature_K": 311.4,
+      "Rotational_speed_rpm": 1349.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.9889262914657593,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 15,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 52.9,
+      "Tool_wear_min": 218.0
+    },
+    "true_label": 1,
+    "expected_probability": 0.9540804028511047,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 16,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": 302.3,
+      "Process_temperature_K": 310.9,
+      "Rotational_speed_rpm": 1360.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.9205304384231567,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 17,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 55.6,
+      "Tool_wear_min": 215.0
+    },
+    "true_label": 1,
+    "expected_probability": 0.9702567458152771,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 18,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1235.0,
+      "Torque_Nm": 76.2,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.8257337212562561,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 19,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 30.5,
+      "Tool_wear_min": 234.0
+    },
+    "true_label": 1,
+    "expected_probability": 0.07683227956295013,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 20,
+    "machine_data": {
+      "Type": 2,
+      "Air_temperature_K": 302.3,
+      "Process_temperature_K": 310.9,
+      "Rotational_speed_rpm": 1366.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.9264107942581177,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 21,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": 303.3,
+      "Process_temperature_K": 311.6,
+      "Rotational_speed_rpm": 1301.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.9889262914657593,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 22,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1381.0,
+      "Torque_Nm": 65.2,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.9525856375694275,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 23,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 48.0,
+      "Tool_wear_min": 215.0
+    },
+    "true_label": 1,
+    "expected_probability": 0.1478024572134018,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 24,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 59.2,
+      "Tool_wear_min": 198.0
+    },
+    "true_label": 1,
+    "expected_probability": 0.9493752717971802,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 25,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": 302.3,
+      "Process_temperature_K": 310.8,
+      "Rotational_speed_rpm": 1377.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 1,
+    "expected_probability": 0.9820916056632996,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [
+      "FAILURE"
+    ],
+    "expected_uncertainty_status": "FAILURE",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 26,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 34.3,
+      "Tool_wear_min": 161.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.00026301329489797354,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 27,
+    "machine_data": {
+      "Type": 2,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1535.0,
+      "Torque_Nm": 33.3,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00016929174307733774,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 28,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": 297.9,
+      "Process_temperature_K": 309.0,
+      "Rotational_speed_rpm": 1562.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 8.288583194371313e-05,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 29,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": 302.1,
+      "Process_temperature_K": 311.2,
+      "Rotational_speed_rpm": 1422.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00104054796975106,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 30,
+    "machine_data": {
+      "Type": 2,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 37.7,
+      "Tool_wear_min": 36.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.0001315194822382182,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 31,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": 299.2,
+      "Process_temperature_K": 308.6,
+      "Rotational_speed_rpm": 1381.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.0002345151879126206,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 32,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": 300.5,
+      "Process_temperature_K": 310.7,
+      "Rotational_speed_rpm": 1606.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 6.938791193533689e-05,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 33,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": 296.3,
+      "Process_temperature_K": 307.2,
+      "Rotational_speed_rpm": 1286.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00047940961667336524,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 34,
+    "machine_data": {
+      "Type": 2,
+      "Air_temperature_K": 303.1,
+      "Process_temperature_K": 312.8,
+      "Rotational_speed_rpm": 1435.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.0011450436431914568,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 35,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 38.9,
+      "Tool_wear_min": 18.0
+    },
+    "true_label": 0,
+    "expected_probability": 9.214736201101914e-05,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 36,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 48.7,
+      "Tool_wear_min": 147.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.00010830920655280352,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 37,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": 300.2,
+      "Process_temperature_K": 311.6,
+      "Rotational_speed_rpm": 1999.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 7.275838288478553e-05,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 38,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": 301.4,
+      "Process_temperature_K": 310.6,
+      "Rotational_speed_rpm": 1459.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00040951301343739033,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 39,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 47.4,
+      "Tool_wear_min": 57.0
+    },
+    "true_label": 0,
+    "expected_probability": 9.13195835892111e-05,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 40,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": 303.9,
+      "Process_temperature_K": 313.1,
+      "Rotational_speed_rpm": 1491.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.0003611816209740937,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 41,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": 300.2,
+      "Process_temperature_K": 311.5,
+      "Rotational_speed_rpm": 1500.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 9.882122685667127e-05,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 42,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 34.6,
+      "Tool_wear_min": 71.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.00019275867089163512,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 43,
+    "machine_data": {
+      "Type": 2,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1383.0,
+      "Torque_Nm": 49.1,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.000265715760178864,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 44,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 47.6,
+      "Tool_wear_min": 45.0
+    },
+    "true_label": 0,
+    "expected_probability": 7.937490590848029e-05,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 45,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 36.7,
+      "Tool_wear_min": 18.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.00018545176135376096,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 46,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1471.0,
+      "Torque_Nm": 45.2,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.0005204562330618501,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 47,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1904.0,
+      "Torque_Nm": 20.3,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00026546180015429854,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 48,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1566.0,
+      "Torque_Nm": 37.8,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00011383632954675704,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 49,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1709.0,
+      "Torque_Nm": 32.1,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00014340555935632437,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 50,
+    "machine_data": {
+      "Type": 2,
+      "Air_temperature_K": 302.2,
+      "Process_temperature_K": 311.3,
+      "Rotational_speed_rpm": 1749.0,
+      "Torque_Nm": null,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.0002781449584290385,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 51,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 18.3,
+      "Tool_wear_min": 207.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.07960259169340134,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 52,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 45.3,
+      "Tool_wear_min": 205.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.07918053865432739,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 53,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 54.1,
+      "Tool_wear_min": 193.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.07607816159725189,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 54,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 31.1,
+      "Tool_wear_min": 211.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.08812704682350159,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 55,
+    "machine_data": {
+      "Type": 2,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 26.1,
+      "Tool_wear_min": 210.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.09104618430137634,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 56,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 30.1,
+      "Tool_wear_min": 210.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.09413556754589081,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 57,
+    "machine_data": {
+      "Type": 2,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 34.4,
+      "Tool_wear_min": 228.0
+    },
+    "true_label": 1,
+    "expected_probability": 0.06132807210087776,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 58,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 64.4,
+      "Tool_wear_min": 113.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.059383049607276917,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 59,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 39.9,
+      "Tool_wear_min": 210.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.057755835354328156,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 60,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 50.7,
+      "Tool_wear_min": 206.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.05638669431209564,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 61,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 51.0,
+      "Tool_wear_min": 206.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.05638669431209564,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 62,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 29.0,
+      "Tool_wear_min": 235.0
+    },
+    "true_label": 1,
+    "expected_probability": 0.10607902705669403,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 63,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 36.9,
+      "Tool_wear_min": 231.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.10682409256696701,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 64,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 14.7,
+      "Tool_wear_min": 144.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.05185604840517044,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 65,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1304.0,
+      "Torque_Nm": 62.8,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.108805350959301,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 66,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1348.0,
+      "Torque_Nm": 62.5,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.11016904562711716,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 67,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 51.2,
+      "Tool_wear_min": 215.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.049829769879579544,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 68,
+    "machine_data": {
+      "Type": 2,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 2161.0,
+      "Torque_Nm": 16.5,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.04915571212768555,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 69,
+    "machine_data": {
+      "Type": 2,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1256.0,
+      "Torque_Nm": 62.3,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.04869507998228073,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 70,
+    "machine_data": {
+      "Type": 2,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 43.8,
+      "Tool_wear_min": 218.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.1113746166229248,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 71,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1168.0,
+      "Torque_Nm": 63.4,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.04634531959891319,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 72,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 34.1,
+      "Tool_wear_min": 215.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.11777108162641525,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 73,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 55.8,
+      "Tool_wear_min": 193.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.12418412417173386,
+    "expected_prediction": "FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": true,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 74,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 60.8,
+      "Tool_wear_min": 146.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.035719964653253555,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 75,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1378.0,
+      "Torque_Nm": 39.9,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.0005798921338282526,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 76,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 28.4,
+      "Tool_wear_min": 79.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.00021662891958840191,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 77,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1513.0,
+      "Torque_Nm": 43.8,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 7.215876394184306e-05,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 78,
+    "machine_data": {
+      "Type": 2,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 36.7,
+      "Tool_wear_min": 17.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.00020528426102828234,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 79,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1671.0,
+      "Torque_Nm": 29.9,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00015082619211170822,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 80,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1889.0,
+      "Torque_Nm": 22.8,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00026546180015429854,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 81,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1657.0,
+      "Torque_Nm": 32.2,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00014340555935632437,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 82,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1372.0,
+      "Torque_Nm": 39.6,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.0006199142662808299,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 83,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1534.0,
+      "Torque_Nm": 39.7,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 7.165614078985527e-05,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 84,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1492.0,
+      "Torque_Nm": 46.1,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00014045614807400852,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 85,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1521.0,
+      "Torque_Nm": 38.2,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00010157373617403209,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 86,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1516.0,
+      "Torque_Nm": 33.7,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00018468590860720724,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 87,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1291.0,
+      "Torque_Nm": 56.4,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.0005475912475958467,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 88,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 39.9,
+      "Tool_wear_min": 63.0
+    },
+    "true_label": 0,
+    "expected_probability": 8.604330650996417e-05,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 89,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 47.4,
+      "Tool_wear_min": 170.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.00010830920655280352,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 90,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1897.0,
+      "Torque_Nm": 23.6,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.0001527915010228753,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 91,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 38.6,
+      "Tool_wear_min": 177.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.0001257372205145657,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 92,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 48.6,
+      "Tool_wear_min": 27.0
+    },
+    "true_label": 0,
+    "expected_probability": 7.937490590848029e-05,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 93,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1523.0,
+      "Torque_Nm": 42.0,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 7.215876394184306e-05,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 94,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 61.8,
+      "Tool_wear_min": 10.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.0067025357857346535,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 95,
+    "machine_data": {
+      "Type": 1,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 58.3,
+      "Tool_wear_min": 9.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.002825224306434393,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [],
+    "expected_uncertainty_status": "REVIEW_REQUIRED",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 96,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1592.0,
+      "Torque_Nm": 35.0,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00034678017254918814,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 97,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1762.0,
+      "Torque_Nm": 26.1,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.0001527915010228753,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 98,
+    "machine_data": {
+      "Type": 2,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": null,
+      "Torque_Nm": 43.8,
+      "Tool_wear_min": 119.0
+    },
+    "true_label": 0,
+    "expected_probability": 0.0001054195236065425,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 99,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1782.0,
+      "Torque_Nm": 26.8,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.0001527915010228753,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  },
+  {
+    "case_id": 100,
+    "machine_data": {
+      "Type": 0,
+      "Air_temperature_K": null,
+      "Process_temperature_K": null,
+      "Rotational_speed_rpm": 1496.0,
+      "Torque_Nm": 47.4,
+      "Tool_wear_min": null
+    },
+    "true_label": 0,
+    "expected_probability": 0.00010830920655280352,
+    "expected_prediction": "NO FAILURE",
+    "expected_prediction_set": [
+      "NO FAILURE"
+    ],
+    "expected_uncertainty_status": "HEALTHY",
+    "expected_send_to_agent2": false,
+    "expected_threshold": 0.08,
+    "expected_conformal_alpha": 0.1
+  }
+]
